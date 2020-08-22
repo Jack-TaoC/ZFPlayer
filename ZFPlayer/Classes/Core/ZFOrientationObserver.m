@@ -146,7 +146,7 @@
         if (![UIDevice currentDevice].generatesDeviceOrientationNotifications) {
             [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         }
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
     }
 }
 
