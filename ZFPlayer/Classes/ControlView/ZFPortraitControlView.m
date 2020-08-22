@@ -60,12 +60,12 @@
         // 添加子控件
         [self addSubview:self.topToolView];
         [self addSubview:self.bottomToolView];
-        [self addSubview:self.playOrPauseBtn];
+        [self.bottomToolView addSubview:self.playOrPauseBtn];
         [self.topToolView addSubview:self.titleLabel];
         [self.bottomToolView addSubview:self.currentTimeLabel];
         [self.bottomToolView addSubview:self.slider];
         [self.bottomToolView addSubview:self.totalTimeLabel];
-        [self.bottomToolView addSubview:self.fullScreenBtn];
+//        [self.bottomToolView addSubview:self.fullScreenBtn];
         
         // 设置子控件的响应事件
         [self makeSubViewsAction];
@@ -107,27 +107,26 @@
     
     min_x = 0;
     min_y = 0;
-    min_w = 44;
+    min_w = 40;
     min_h = min_w;
     self.playOrPauseBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    self.playOrPauseBtn.center = self.center;
     
-    min_x = min_margin;
+    min_x = 47;
     min_w = 62;
     min_h = 28;
     min_y = (self.bottomToolView.zf_height - min_h)/2;
     self.currentTimeLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
     
-    min_w = 28;
-    min_h = min_w;
-    min_x = self.bottomToolView.zf_width - min_w - min_margin;
-    min_y = 0;
-    self.fullScreenBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    self.fullScreenBtn.zf_centerY = self.currentTimeLabel.zf_centerY;
+//    min_w = 28;
+//    min_h = min_w;
+//    min_x = self.bottomToolView.zf_width - min_w - min_margin;
+//    min_y = 0;
+//    self.fullScreenBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
+//    self.fullScreenBtn.zf_centerY = self.currentTimeLabel.zf_centerY;
     
     min_w = 62;
     min_h = 28;
-    min_x = self.fullScreenBtn.zf_left - min_w - 4;
+    min_x = min_view_w - min_w - 4;
     min_y = 0;
     self.totalTimeLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.totalTimeLabel.zf_centerY = self.currentTimeLabel.zf_centerY;
